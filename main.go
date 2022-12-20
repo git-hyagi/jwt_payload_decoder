@@ -27,9 +27,9 @@ func main() {
 
 	// padding the input length to follow base64 standard
 	if len(match[2])%3 == 1 {
-		encodedPayload = match[2] + "=="
-	} else if len(match[2])%3 == 2 {
 		encodedPayload = match[2] + "="
+	} else if len(match[2])%3 == 2 {
+		encodedPayload = match[2] + "=="
 	} else {
 		encodedPayload = match[2]
 	}
